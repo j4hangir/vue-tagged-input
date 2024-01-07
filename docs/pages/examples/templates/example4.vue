@@ -27,7 +27,7 @@
 
 <script>
 import ElCode from '@components/el-code';
-import VueTagsInput from '@johmun/vue-tags-input';
+import VueTagsInput from '@j4hangir/vue-tags-input';
 
 export default {
   components: {

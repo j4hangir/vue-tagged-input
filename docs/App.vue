@@ -12,7 +12,7 @@
             <i class="material-icons" @click="navVisible = true">menu</i>
           </div>
           <div>
-            <a class="gt-link" href="https://github.com/JohMun/vue-tags-input" target="_blank">
+            <a class="gt-link" href="https://github.com/j4hangir/vue-tags-input" target="_blank">
               <github-icon />
               <span>{{ stars }}</span>
               <i class="material-icons">star</i>
@@ -52,7 +52,7 @@ export default {
     '$route': 'scrollTop',
   },
   mounted() {
-    axois.get('http://api.github.com/repos/johmun/vue-tags-input').then(r => {
+    axois.get('http://api.github.com/repos/j4hangir/vue-tags-input').then(r => {
       this.stars = r.data.stargazers_count;
     }).catch(e => e);
   },

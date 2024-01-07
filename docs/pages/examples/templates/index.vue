@@ -54,7 +54,7 @@
 
 <script>
 import BreakingChanges from '@components/breaking-changes';
-import VueTagsInput from '@johmun/vue-tags-input';
+import VueTagsInput from '@j4hangir/vue-tags-input';
 import ElCode from '@components/el-code';
 import TagInput from '@tag-input';
 import Example1 from './example1';

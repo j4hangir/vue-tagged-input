@@ -20,7 +20,7 @@
         To achieve that, we can import some helper functions from vue-tags-input.
       </p>
       <el-code
-        code="import { VueTagsInput, createTag, createTags } from '@johmun/vue-tags-input';"
+        code="import { VueTagsInput, createTag, createTags } from '@j4hangir/vue-tags-input';"
       />
       <ul>
         <li v-for="(p, index) in helpers" :key="index" class="docs-item">

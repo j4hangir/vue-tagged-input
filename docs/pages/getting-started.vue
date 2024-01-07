@@ -18,7 +18,7 @@
       <h2>Install</h2>
       <span>Install vue-tags-input with npm</span>
       <el-code>
-        <code>npm install @johmun/vue-tags-input</code>
+        <code>npm install @j4hangir/vue-tags-input</code>
       </el-code>
       <h2>Usage</h2>
       <el-code lang="html" :code="require('./getting-started.demo.html')" />
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import VueTagsInput from '@johmun/vue-tags-input';
+import VueTagsInput from '@j4hangir/vue-tags-input';
 import ElCode from '@components/el-code';
 
 export default {
@@ -47,7 +47,7 @@ export default {
     return {
       tag: '',
       tags: [],
-      cdnUrl: 'https://unpkg.com/@johmun/vue-tags-input/dist/vue-tags-input.js',
+      cdnUrl: 'https://unpkg.com/@j4hangir/vue-tags-input/dist/vue-tags-input.js',
     };
   },
   computed: {

@@ -1,120 +1,122 @@
 {
-  "name": "@sipec/vue3-tags-input",
-  "version": "3.0.3",
-  "author": "Johannes Munari <johannesm@hotmail.de>",
-  "license": "MIT",
-  "description": "A tags input component for Vue 3 with autocompletion, custom validation, templating and much more",
-  "homepage": "http://www.vue-tags-input.com",
-  "private": false,
-  "keywords": [
-    "javascript",
-    "vue",
-    "vue3",
-    "tags",
-    "vue-tags-input",
-    "vue-component",
-    "autocomplete"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sipec/vue-tags-input.git"
-  },
-  "main": "dist/vue-tags-input.js",
-  "scripts": {
-    "dev": "npm run docs",
-    "docs": "cross-env NODE_ENV=development webpack-dev-server --hot --config ./build/docs.config.js",
-    "build-docs": "cross-env NODE_ENV=production webpack --config ./build/docs.config.js --hide-modules",
-    "analyze": "cross-env ANALYZE=true npm run build-docs",
-    "build-lib": "webpack --config ./build/lib.config.js --hide-modules",
-    "precommit": "lint-staged",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --ignore-pattern *.demo.*",
-    "lint-fix": "eslint --fix --ignore-path .gitignore --ext .js,.vue . --ignore-pattern *.demo.*",
-    "e2e": "testcafe all e2e/*test* --app \"npm run dev\" --app-init-delay 10000 -S -s screenshots"
-  },
-  "lint-staged": {
-    "*.js": "eslint",
-    "*.vue": "eslint"
-  },
-  "files": [
-    "dist/*",
-    "vue-tags-input/*"
-  ],
-  "peerDependencies": {
-    "vue": "3.x"
-  },
-  "dependencies": {
-    "vue": "3.x"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@vue/compiler-sfc": "^3.0.11",
-    "autoprefixer": "^9.4.3",
-    "axios": "^0.21.1",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
-    "clean-webpack-plugin": "^1.0.0",
-    "copy-webpack-plugin": "^4.5.1",
-    "cross-env": "^5.1.4",
-    "css-loader": "^2.0.2",
-    "documentation": "^13.2.4",
-    "eslint": "^7.25.0",
-    "eslint-plugin-vue": "^7.9.0",
-    "fast-deep-equal": "^2.0.1",
-    "file-loader": "^3.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "http-server": "^0.11.1",
-    "husky": "^1.1.2",
-    "image-webpack-loader": "^4.6.0",
-    "ip": "^1.1.5",
-    "lint-staged": "^8.1.0",
-    "node-sass": "^4.8.1",
-    "normalize-css": "^2.3.1",
-    "postcss-loader": "^3.0.0",
-    "raw-loader": "^1.0.0",
-    "sass-loader": "^7.1.0",
-    "testcafe": "^0.23.3",
-    "testcafe-vue-selectors": "^3.0.0",
-    "url-loader": "^1.1.2",
-    "vue-cli-plugin-vue-next": "~0.1.4",
-    "vue-loader": "^16.2.0",
-    "vue-router": "^4.0.6",
-    "vue-style-loader": "^4.1.2",
-    "webpack": "^4.28.1",
-    "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
-  },
-  "eslintConfig": {
-    "parserOptions": {
-      "parser": "babel-eslint",
-      "ecmaVersion": 2017,
-      "sourceType": "module"
+    "name": "@j4hangir/vue3-tags-input",
+    "version": "3.0.3",
+    "author": "j4hangir",
+    "license": "MIT",
+    "description": "A tags input component for Vue 3 with autocompletion, custom validation, templating and much more",
+    "homepage": "http://www.vue-tags-input.com",
+    "private": false,
+    "keywords": [
+        "javascript",
+        "vue",
+        "vue3",
+        "tags",
+        "vue-tags-input",
+        "vue-component",
+        "autocomplete"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/j4hangir/vue-tags-input.git"
     },
-    "extends": "plugin:vue/vue3-recommended",
-    "rules": {
-      "vue/max-attributes-per-line": "off",
-      "vue/no-use-v-if-with-v-for": "off",
-      "vue/no-unused-components": "off",
-      "vue/component-name-in-template-casing": "off",
-      "vue/singleline-html-element-content-newline": "off",
-      "vue/no-v-html": "off",
-      "vue/require-default-prop": "off",
-      "vue/use-v-on-exact": "off",
-      "vue/multiline-html-element-content-newline": "off"
+    "type": "module",
+    "main": "dist/vue-tags-input.js",
+    "types": "vue-tags-input.d.ts",
+    "scripts": {
+        "dev": "npm run docs",
+        "docs": "cross-env NODE_ENV=development webpack-dev-server --hot --config build/docs.config.mjs",
+        "build-docs": "cross-env NODE_ENV=production webpack --config build/docs.config.mjs --hide-modules",
+        "analyze": "cross-env ANALYZE=true npm run build-docs",
+        "build-lib": "webpack --config build/lib.config.mjs ",
+        "precommit": "lint-staged",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --ignore-pattern *.demo.*",
+        "lint-fix": "eslint --fix --ignore-path .gitignore --ext .js,.vue . --ignore-pattern *.demo.*",
+        "e2e": "testcafe all e2e/*test* --app \"npm run dev\" --app-init-delay 10000 -S -s screenshots"
+    },
+    "lint-staged": {
+        "*.js": "eslint",
+        "*.vue": "eslint"
+    },
+    "files": [
+        "dist/*",
+        "vue-tags-input/*"
+    ],
+    "peerDependencies": {
+        "vue": "3.x"
+    },
+    "dependencies": {
+        "vue": "3.x"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+        "@babel/polyfill": "^7.0.0",
+        "@babel/preset-env": "^7.1.0",
+        "@vue/compiler-sfc": "^3.0.11",
+        "autoprefixer": "^10.4.16",
+        "axios": "^1.6.5",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^9.1.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.8.1",
+        "documentation": "^14.0.2",
+        "eslint": "^8.56.0",
+        "eslint-plugin-vue": "^9.19.2",
+        "fast-deep-equal": "^3.1.3",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.6.0",
+        "http-server": "^14.1.1",
+        "husky": "^8.0.3",
+        "image-webpack-loader": "^8.1.0",
+        "ip": "^1.1.5",
+        "lint-staged": "^15.2.0",
+        "node-sass": "^9.0.0",
+        "normalize-css": "^2.3.1",
+        "postcss-loader": "^7.3.4",
+        "raw-loader": "^4.0.2",
+        "sass-loader": "^13.3.3",
+        "testcafe": "^3.5.0",
+        "testcafe-vue-selectors": "^3.0.0",
+        "url-loader": "^4.1.1",
+        "vue-cli-plugin-vue-next": "~0.1.4",
+        "vue-loader": "^17.4.2",
+        "vue-router": "^4.0.6",
+        "vue-style-loader": "^4.1.2",
+        "webpack": "^5.89.0",
+        "webpack-bundle-analyzer": "^4.10.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "parser": "babel-eslint",
+            "ecmaVersion": 2017,
+            "sourceType": "module"
+        },
+        "extends": "plugin:vue/vue3-recommended",
+        "rules": {
+            "vue/max-attributes-per-line": "off",
+            "vue/no-use-v-if-with-v-for": "off",
+            "vue/no-unused-components": "off",
+            "vue/component-name-in-template-casing": "off",
+            "vue/singleline-html-element-content-newline": "off",
+            "vue/no-v-html": "off",
+            "vue/require-default-prop": "off",
+            "vue/use-v-on-exact": "off",
+            "vue/multiline-html-element-content-newline": "off"
+        }
+    },
+    "browserslist": [
+        "ie >= 11",
+        "last 2 Firefox versions",
+        "last 5 Chrome versions",
+        "last 2 iOS versions"
+    ],
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
     }
-  },
-  "browserslist": [
-    "ie >= 11",
-    "last 2 Firefox versions",
-    "last 5 Chrome versions",
-    "last 2 iOS versions"
-  ],
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  }
 }

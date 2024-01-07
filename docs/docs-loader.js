@@ -1,5 +1,6 @@
-const documentation = require('documentation');
-const path = require('path');
+import documentation from 'documentation';
+import path from 'path';
+
 
 module.exports = function() {
   const callback = this.async();
