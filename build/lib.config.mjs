@@ -1,9 +1,10 @@
 'use strict';
-const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const {VueLoaderPlugin} = require('vue-loader');
-const {fileURLToPath} = require('url');
-const webpack = require('webpack');
+import path from 'path';
+import {CleanWebpackPlugin} from 'clean-webpack-plugin';
+import {VueLoaderPlugin} from 'vue-loader';
+import {fileURLToPath} from 'url';
+import webpack from "webpack";
+
 
 const {DefinePlugin} = webpack;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
