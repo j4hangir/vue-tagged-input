@@ -19,9 +19,7 @@
         "type": "git",
         "url": "https://github.com/j4hangir/vue-tags-input.git"
     },
-    "type": "module",
     "main": "dist/vue-tags-input.js",
-    "types": "vue-tags-input.d.ts",
     "scripts": {
         "dev": "npm run docs",
         "docs": "cross-env NODE_ENV=development webpack-dev-server --hot --config build/docs.config.mjs",
@@ -72,7 +70,7 @@
         "image-webpack-loader": "^8.1.0",
         "ip": "^1.1.5",
         "lint-staged": "^15.2.0",
-        "node-sass": "^9.0.0",
+        "node-sass": "^8.0.0",
         "normalize-css": "^2.3.1",
         "postcss-loader": "^7.3.4",
         "raw-loader": "^4.0.2",
