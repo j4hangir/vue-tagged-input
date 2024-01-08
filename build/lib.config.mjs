@@ -2,8 +2,10 @@
 import path from 'path';
 import {CleanWebpackPlugin} from 'clean-webpack-plugin';
 import {VueLoaderPlugin} from 'vue-loader';
+
 import {fileURLToPath} from 'url';
 import webpack from "webpack";
+import autoprefixer from "autoprefixer";
 
 
 const {DefinePlugin} = webpack;
@@ -19,6 +21,8 @@ export default {
         filename: 'vue-tags-input.js',
         library: 'vueTagsInput',
         libraryTarget: 'umd',
+        assetModuleFilename: 'assets/fonts/[hash][ext][query]'
+
     },
     externals: {
         vue: 'vue',
@@ -30,43 +34,56 @@ export default {
                 loader: 'vue-loader',
             },
             {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            appendTsSuffixTo: [/\.vue$/],
-                        },
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: ['@babel/plugin-proposal-object-rest-spread'],
+                        presets: ['@babel/preset-env']
                     },
-                ],
+                },
             },
             {
                 test: /\.(scss|css)$/,
                 use: [
                     'vue-style-loader',
-                    'css-loader',
-                    'postcss-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: () => [
+                                    autoprefixer(),
+                                ],
+                            },
+                            sourceMap: true,
+                        },
+                    },
                     'sass-loader',
                 ],
             },
             {
                 test: /\.(ttf|eot|woff|woff2|otf)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    name: '[name].[ext]',
-                    outputPath: 'fonts/',
-                    publicPath: 'fonts/',
+                    limit: 100000,
                 },
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[hash][ext][query]'
+                }
+
             },
         ],
     },
     plugins: [
-        new DefinePlugin({
-            __VUE_OPTIONS_API__: true,
-            __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
-            __VUE_PROD_DEVTOOLS__: false,
-        }),
         new VueLoaderPlugin(),
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: ['../dist/**/*'],

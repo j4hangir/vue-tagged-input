@@ -20,7 +20,6 @@
         "url": "https://github.com/j4hangir/vue-tags-input.git"
     },
     "main": "dist/vue-tags-input.js",
-    "type": "module",
     "types": "vue-tags-input.d.ts",
     "scripts": {
         "dev": "npm run docs",

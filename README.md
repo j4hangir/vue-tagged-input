@@ -2,7 +2,7 @@
 
 A tags input component for Vue 3 with autocompletion, custom validation, templating and much more
 
-Forked from [@j4hangir/vue-tags-input](https://www.npmjs.com/package/@j4hangir/vue-tags-input), which you should use instead if your project is on Vue 2. 
+Forked from [@sipec/vue3-tags-input](https://www.npmjs.com/package/@sipec/vue3-tags-input)
 
 [Demo & Docs](http://www.vue-tags-input.com) (for the original version)
 
