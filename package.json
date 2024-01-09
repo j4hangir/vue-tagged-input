@@ -1,5 +1,5 @@
 {
-    "name": "@j4hangir/vue3-tags-input",
+    "name": "@j4hangir/vue-tagged-input",
     "version": "3.0.3",
     "author": "j4hangir",
     "license": "MIT",
@@ -11,23 +11,22 @@
         "vue",
         "vue3",
         "tags",
-        "vue-tags-input",
+        "vue-tagged-input",
         "vue-component",
         "autocomplete"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/j4hangir/vue-tags-input.git"
+        "url": "https://github.com/j4hangir/vue-tagged-input.git"
     },
-    "main": "dist/vue-tags-input.es.js",
-    "types": "vue-tags-input.d.ts",
+    "main": "dist/vue-tagged-input.es.js",
+    "types": "vue-tagged-input.d.ts",
     "scripts": {
         "dev": "npm run docs",
         "docs": "cross-env NODE_ENV=development webpack-dev-server --hot --config build/docs.config.mjs",
         "build-docs": "cross-env NODE_ENV=production webpack --config build/docs.config.mjs --hide-modules",
         "analyze": "cross-env ANALYZE=true npm run build-docs",
-        "build-lib": "webpack --config build/lib.config.mjs ",
-        "build-lib-vite": "vite --config build/vite.config.js build",
+        "build-lib": "vite --config build/lib.vite.config.js build",
         "precommit": "lint-staged",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --ignore-pattern *.demo.*",
         "lint-fix": "eslint --fix --ignore-path .gitignore --ext .js,.vue . --ignore-pattern *.demo.*",

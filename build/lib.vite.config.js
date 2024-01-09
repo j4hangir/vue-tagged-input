@@ -1,4 +1,4 @@
-// vite.config.js for the lib
+// lib.vite.config.js for the lib
 
 import {defineConfig} from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -13,9 +13,9 @@ export default defineConfig({
     build: {
         cssCodeSplit: false,
         lib: {
-            entry: path.resolve(__dirname, '../src/rollup.js'),
+            entry: path.resolve(__dirname, './rollup.js'),
             name: 'VueTagsInput',
-            fileName: (format) => `vue-tags-input.${format}.js`
+            fileName: (format) => `vue-tagged-input.${format}.js`
         },
         rollupOptions: {
             external: ['vue'],
@@ -25,7 +25,7 @@ export default defineConfig({
                 },
                 assetFileNames: assetInfo => {
                     if (assetInfo.name.endsWith('.css'))
-                        return 'assets/vue-tags-input.css'
+                        return 'assets/vue-tagged-input.css'
                     else if (assetInfo.name.endsWith('.ttf') || assetInfo.name.endsWith('.eot') || assetInfo.name.endsWith('.woff') || assetInfo.name.endsWith('.woff2') || assetInfo.name.endsWith('.otf')) {
                         return 'assets/fonts/[hash][extname]';
                     } else
@@ -46,7 +46,7 @@ export default defineConfig({
             scss: {}
         },
         postcss: {
-            to: 'vue-tags-input.css',
+            to: 'vue-tagged-input.css',
             plugins: [
                 require('autoprefixer'),
             ],

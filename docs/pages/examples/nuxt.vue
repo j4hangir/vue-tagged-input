@@ -3,7 +3,7 @@
     <div class="content">
       <h1>Use Taginput with Nuxt</h1>
       <p>
-        Create the file <span class="code">vue-tags-input.js</span> with the following content
+          Create the file <span class="code">vue-tagged-input.js</span> with the following content
         in the <span class="code">./plugins</span> folder.
       </p>
 

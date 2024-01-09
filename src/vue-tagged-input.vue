@@ -5,7 +5,7 @@
 
 <template>
     <div
-        class="vue-tags-input"
+        class="vue-tagged-input"
         :class="[{ 'ti-disabled': disabled }, { 'ti-focus': focused }, $attrs.class]"
         :style="$attrs.style"
     >
@@ -188,7 +188,8 @@
 </template>
 
 <!-- js and scss resources → I separated it into different files, because they became huge -->
-<script src="./vue-tags-input.js"></script>
+<script src="./vue-tagged-input.js"></script>
+
 <style lang="scss">
-@import "./assets/vue-tags-input.scss";
+@import "./assets/vue-tagged-input.scss";
 </style>

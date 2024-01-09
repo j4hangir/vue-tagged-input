@@ -57,7 +57,7 @@ export default {
   /**
    * @description Pass an array containing objects like in the example below.
      The properties 'style' and 'class' are optional. Of course it is possible to add custom
-     properties to a tag object. vue-tags-input won't change the key and value.
+   properties to a tag object. vue-tagged-input won't change the key and value.
    * @property {props}
    * @type {Array}
    * @sync
@@ -140,7 +140,7 @@ export default {
     default: false,
   },
   /**
-   * @description Property to disable vue-tags-input.
+   * @description Property to disable vue-tagged-input.
    * @property {props}
    * @type {Boolean}
    * @default false
@@ -318,7 +318,7 @@ export default {
   },
   /**
    * @description If it's true, the user can paste into the input element and
-     vue-tags-input will create tags out of the incoming text.
+   vue-tagged-input will create tags out of the incoming text.
    * @property {props}
    * @type {Boolean}
    * @default true

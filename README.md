@@ -1,4 +1,4 @@
-# vue-tags-input
+# vue-tagged-input
 
 A tags input component for Vue 3 with autocompletion, custom validation, templating and much more
 
@@ -26,12 +26,12 @@ Forked from [@sipec/vue3-tags-input](https://www.npmjs.com/package/@sipec/vue3-t
 
 NPM
 ```
-npm install @j4hangir/vue3-tags-input
+npm install @j4hangir/vue-tagged-input
 ```
 
 CDN
 ```
-<script src="https://unpkg.com/@j4hangir/vue3-tags-input/dist/vue-tags-input.js"></script>
+<script src="https://unpkg.com/@j4hangir/vue-tagged-input/dist/vue-tagged-input.js"></script>
 ```
 
 ## Usage
@@ -50,11 +50,11 @@ CDN
 
 ```javascript
 <script>
-import VueTagsInput from "@j4hangir/vue3-tags-input";
+    import VueTaggedInput from "@j4hangir/vue-tagged-input";
 
 export default {
   components: {
-    VueTagsInput,
+    VueTaggedInput,
   },
   data() {
     return {
@@ -64,6 +64,15 @@ export default {
   },
 };
 </script>
+```
+
+Import the css
+
+```html
+
+<style>
+    @import "@j4hangir/vue-tagged-input/dist/assets/vue-tagged-input.css";
+</style>
 ```
 
 ## Migration From Vue 2

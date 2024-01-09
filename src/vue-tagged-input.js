@@ -5,11 +5,11 @@ import equal from 'fast-deep-equal';
 
 import {createTags, createTag, createClasses, clone} from './create-tags.js';
 import TagInput from './tag-input.vue';
-import props from './vue-tags-input.props.js';
+import props from './vue-tagged-input.props.js';
 
 
 export default {
-    name: 'VueTagsInput',
+    name: 'VueTaggedInput',
     components: {TagInput},
     props,
     emits: [

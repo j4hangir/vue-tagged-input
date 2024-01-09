@@ -1,6 +1,6 @@
-// vue-tags-input.d.ts
+// vue-tagged-input.d.ts
 
-declare module '@j4hangir/vue3-tags-input' {
+declare module '@j4hangir/vue-tagged-input' {
     import {DefineComponent} from 'vue';
 
     export interface Tag {

@@ -55,13 +55,13 @@ input[disabled] {
   background-color: transparent;
 }
 
-.vue-tags-input {
+.vue-tagged-input {
   max-width: 450px;
   position: relative;
   background-color: #fff;
 }
 
-div.vue-tags-input.disabled {
+div.vue-tagged-input.disabled {
   opacity: 0.5;
 
   * {
