@@ -23,6 +23,7 @@ export default defineConfig({
                 globals: {
                     vue: 'Vue'
                 },
+
                 assetFileNames: assetInfo => {
                     if (assetInfo.name.endsWith('.css'))
                         return 'assets/vue-tagged-input.css'
