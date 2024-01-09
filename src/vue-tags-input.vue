@@ -189,4 +189,6 @@
 
 <!-- js and scss resources → I separated it into different files, because they became huge -->
 <script src="./vue-tags-input.js"></script>
-<style lang="scss" src="./vue-tags-input.scss" scoped></style>
+<style lang="scss">
+@import "./assets/vue-tags-input.scss";
+</style>

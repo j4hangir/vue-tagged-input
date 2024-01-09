@@ -19,7 +19,7 @@
         "type": "git",
         "url": "https://github.com/j4hangir/vue-tags-input.git"
     },
-    "main": "dist/vue-tags-input.js",
+    "main": "dist/vue-tags-input.es.js",
     "types": "vue-tags-input.d.ts",
     "scripts": {
         "dev": "npm run docs",
@@ -27,6 +27,7 @@
         "build-docs": "cross-env NODE_ENV=production webpack --config build/docs.config.mjs --hide-modules",
         "analyze": "cross-env ANALYZE=true npm run build-docs",
         "build-lib": "webpack --config build/lib.config.mjs ",
+        "build-lib-vite": "vite --config build/vite.config.js build",
         "precommit": "lint-staged",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --ignore-pattern *.demo.*",
         "lint-fix": "eslint --fix --ignore-path .gitignore --ext .js,.vue . --ignore-pattern *.demo.*",
@@ -38,7 +39,7 @@
     },
     "files": [
         "dist/*",
-        "vue-tags-input/*"
+        "src/*"
     ],
     "peerDependencies": {
         "vue": "3.x"
@@ -51,6 +52,7 @@
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
         "@babel/polyfill": "^7.0.0",
         "@babel/preset-env": "^7.1.0",
+        "@vitejs/plugin-vue": "^5.0.2",
         "@vue/compiler-sfc": "^3.0.11",
         "autoprefixer": "^10.4.16",
         "axios": "^1.6.5",
@@ -75,10 +77,12 @@
         "normalize-css": "^2.3.1",
         "postcss-loader": "^7.3.4",
         "raw-loader": "^4.0.2",
+        "sass": "^1.69.7",
         "sass-loader": "^13.3.3",
         "testcafe": "^3.5.0",
         "testcafe-vue-selectors": "^3.0.0",
         "url-loader": "^4.1.1",
+        "vite": "^5.0.11",
         "vue-cli-plugin-vue-next": "~0.1.4",
         "vue-loader": "^17.4.2",
         "vue-router": "^4.0.6",
