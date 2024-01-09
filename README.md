@@ -4,7 +4,7 @@ A tags input component for Vue 3 with autocompletion, custom validation, templat
 
 Forked from [@sipec/vue3-tags-input](https://www.npmjs.com/package/@sipec/vue3-tags-input)
 
-[Demo & Docs](http://www.vue-tags-input.com) (for the original version)
+[//]: # ([Demo & Docs]&#40;http://www.vue-tags-input.com&#41; &#40;for the original version&#41;)
 
 ## Features
 
@@ -39,7 +39,7 @@ CDN
 ```html
 <template>
   <div>
-    <vue-tags-input
+      <vue-tagged-input
       v-model="tag"
       :tags="tags"
       @tags-changed="newTags => tags = newTags"
@@ -48,9 +48,10 @@ CDN
 </template>
 ```
 
-```javascript
-<script>
-    import VueTaggedInput from "@j4hangir/vue-tagged-input";
+```html
+
+<script lang="ts">
+    import {VueTaggedInput} from "@j4hangir/vue-tagged-input";
 
 export default {
   components: {
@@ -65,7 +66,6 @@ export default {
 };
 </script>
 ```
-
 Import the css
 
 ```html
@@ -75,12 +75,8 @@ Import the css
 </style>
 ```
 
-## Migration From Vue 2
-
-This version is faithful to the original spec. The only thing you'll have to change is replacing any usages of `tags.sync` with `vmodel:tags` in the props
-
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2019 Johannes Munari
+Copyright (c) 2023 j4hangir
